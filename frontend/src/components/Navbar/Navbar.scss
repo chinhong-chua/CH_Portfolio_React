@@ -1,11 +1,13 @@
 .app__navbar {
   width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -40,6 +42,7 @@
   li {
     margin: 0 1rem;
     cursor: pointer;
+
     flex-direction: column;
 
     div {
@@ -73,10 +76,11 @@
     }
   }
 
-  @media screen and(max-width:900px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 }
+
 .app__navbar-menu {
   width: 35px;
   height: 35px;
@@ -86,7 +90,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
 
   svg {
     width: 70%;
@@ -116,7 +120,8 @@
     background-size: cover;
     background-repeat: repeat;
 
-    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+    /* top box shadow */
+    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
 
     svg {
       width: 35px;
@@ -124,6 +129,7 @@
       color: var(--secondary-color);
       margin: 0.5rem 1rem;
     }
+
     ul {
       list-style: none;
       margin: 0;
@@ -138,6 +144,7 @@
 
       li {
         margin: 1rem;
+
         a {
           color: var(--gray-color);
           text-decoration: none;
@@ -153,10 +160,12 @@
         }
       }
     }
+
     @media screen and (min-width: 900px) {
       display: none;
     }
   }
+
   @media screen and (min-width: 900px) {
     display: none;
   }

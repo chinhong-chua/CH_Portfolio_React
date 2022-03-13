@@ -21,25 +21,6 @@ const Header = () => {
     <div id="home" className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
-        className="app__header-info"
-      >
-        <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
-            <span>👋</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello I'm</p>
-              <h1 className="head-text">Cruz</h1>
-            </div>
-          </div>
-          <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Software Engineer</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
@@ -51,6 +32,25 @@ const Header = () => {
           alt="profile_circle"
           className="overlay_circle"
         ></motion.img>
+        <motion.div
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="app__header-info"
+        >
+          <div className="app__header-badge">
+            <div className="badge-cmp app__flex">
+              <span>👋</span>
+              <div style={{ marginLeft: 20 }}>
+                <p className="p-text">Hello I'm</p>
+                <h1 className="head-text">Cruz</h1>
+              </div>
+            </div>
+            <div className="tag-cmp app__flex">
+              <p className="p-text">Web Developer</p>
+              <p className="p-text">Software Engineer</p>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
       <motion.div
         variants={scaleVariants}
