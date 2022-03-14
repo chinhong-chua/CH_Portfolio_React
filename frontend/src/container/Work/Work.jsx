@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { AiFillEye, AiFillGithub, AiOutlineAntCloud } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -38,10 +38,10 @@ const Work = () => {
   return (
     <div>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span>
+        My Side <span>Portfolio</span>
       </h2>
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "Angular", "All"].map(
+        {["React", ".NET", ".NET Core", "C#", "GatsbyJS", "All"].map(
           (item, index) => (
             <div
               key={index}
@@ -106,7 +106,25 @@ const Work = () => {
               </p>
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
-              </div>
+              </div>{" "}
+              <a
+                href={work.projectLink}
+                target="_blank"
+                rel="noreferrer"
+                className="p-text app__work-browse"
+              >
+                <motion.div
+                  whileInView={{ scale: [0, 1] }}
+                  whileHover={{ scale: [1, 0.9] }}
+                  transition={{
+                    duration: 0.25,
+                  }}
+                  className="app__flex"
+                >
+                  Browse
+                  <AiOutlineAntCloud size={40} />
+                </motion.div>
+              </a>
             </div>
           </div>
         ))}

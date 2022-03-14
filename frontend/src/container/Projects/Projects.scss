@@ -1,0 +1,89 @@
+.app__about {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+.head-text {
+  padding-top: 10px;
+  width: 100%;
+  flex: 1;
+}
+
+.app__profiles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.app__profile-item {
+  width: 190px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 2rem;
+
+  img {
+    width: 100%;
+    height: 170px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  @media screen and(min-width:2000px) {
+    width: 370px;
+    margin: 2rem 4rem;
+
+    img {
+      height: 320px;
+    }
+  }
+}
+
+//projects slick
+
+.item {
+  min-height: 20rem;
+  //   width: 33%;
+  min-width: 30rem;
+  padding: 40px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  @media screen and(max-width:1200px) {
+    min-height: 10rem;
+    //   width: 33%;
+    min-width: 20rem;
+    padding: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  }
+  text-align: center;
+  h3 {
+    cursor: pointer;
+  }
+}
+
+.inner-carousel {
+  display: flex;
+  margin-bottom: 2rem;
+  //   background: lightblue;
+}
+
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+  width: 100%;
+  //   background: rgb(155, 109, 109);
+}
+
+//hover

@@ -36,6 +36,16 @@ import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 
 import Cruzlogos from "../assets/cruzprofile.png";
+import csharp from "../assets/CSharp.png";
+import jspng from "../assets/js.png";
+import msiis from "../assets/MSIIS.png";
+import azure from "../assets/azure.png";
+import bootstrap from "../assets/bootstrap.png";
+import jquery from "../assets/jquery.jpg";
+import htmlcssjs from "../assets/htmlcssjs.jpg";
+import mui from "../assets/mui.png";
+import netcore from "../assets/NETCore.png";
+import sqlserver from "../assets/sqlserver.png";
 
 export default {
   email,
@@ -72,4 +82,14 @@ export default {
   skype,
   spotify,
   Cruzlogos,
+  csharp,
+  jspng,
+  msiis,
+  azure,
+  bootstrap,
+  jquery,
+  htmlcssjs,
+  mui,
+  netcore,
+  sqlserver,
 };

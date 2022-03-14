@@ -11,16 +11,24 @@ const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
   useEffect(() => {
-    const query = '*[_type=="experiences"]';
-    const skillsQuery = '*[_type=="skills"]';
-
+    const query = '*[_type=="experiences"] | order(_createdAt desc)';
+    const skillsQuery = '*[_type=="skills"] | order(_createdAt asc)';
+    // const skillsQuery =
+    // '*[_type=="skills"&& name==".NET"&& bgColor!="#f7f2f2"]';
     client.fetch(query).then((data) => {
       setExperiences(data);
     });
 
+    // client.delete({ query: query }).then(console.log).catch(console.error);
+
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
+      // console.log(data);
     });
+    // client
+    //   .delete({ query: skillsQuery })
+    //   .then(console.log)
+    //   .catch(console.error);
   }, []);
 
   return (
