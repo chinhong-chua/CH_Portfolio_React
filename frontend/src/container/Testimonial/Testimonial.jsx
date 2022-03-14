@@ -21,16 +21,17 @@ const Testimonial = () => {
   };
 
   useEffect(() => {
-    const query = '*[_type=="testimonials"]';
-    const skillsQuery = '*[_type=="brands"]';
+    const query = '*[_type=="testimonials"] | order(_createdAt asc)';
+    const brandsQuery = '*[_type=="brands"]';
 
     client.fetch(query).then((data) => {
       setTestimonials(data);
     });
 
-    client.fetch(skillsQuery).then((data) => {
+    client.fetch(brandsQuery).then((data) => {
       setBrands(data);
     });
+    // client.delete({ query: query });
   }, []);
 
   const testimonial = testimonials[currentIndex];

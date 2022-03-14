@@ -75,8 +75,8 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:cruz_ch96@outlook.com" className="p-text">
-            cruz_ch96@outlook.com
+          <a href="mailto:cruzlegacy96@gmail.com" className="p-text">
+            cruzlegacy96@gmail.com
           </a>
         </div>
         <div className="app__footer-card">
@@ -168,6 +168,18 @@ const Footer = () => {
           <h3 className="head-text">Thank you for getting in touch!</h3>
         </div>
       )}
+      <button
+        type="button"
+        className=" btn"
+        onClick={() =>
+          window.open(
+            "https://drive.google.com/file/d/17RXEUppiPG-a9QsPAbXvJG_dnZ3R5UAN/view",
+            "_blank"
+          )
+        }
+      >
+        Get My CV
+      </button>
     </>
   );
 };
