@@ -30,10 +30,6 @@ const Certification = () => {
 
   // console.log("tabs: ", tabs);
   // console.log("certs: ", certs);
-  console.log("initialTabs: ", initialTabs);
-
-  console.log("selectedTab: ", selectedTab);
-
   
   if (loading) return "Loading ...";
 
