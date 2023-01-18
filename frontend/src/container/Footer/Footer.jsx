@@ -173,7 +173,7 @@ const Footer = () => {
         className=" btn"
         onClick={() =>
           window.open(
-            "https://drive.google.com/file/d/17RXEUppiPG-a9QsPAbXvJG_dnZ3R5UAN/view",
+            "https://files.chuachinhong.com/CHUA_CHIN HONG_CV Site.pdf",
             "_blank"
           )
         }
@@ -184,8 +184,10 @@ const Footer = () => {
   );
 };
 
-export default AppWrap(
-  MotionWrap(Footer, "app__footer"),
-  "contact",
-  "app__whitebg"
-);
+// export default AppWrap(
+//   MotionWrap(Footer, "app__footer"),
+//   "contact",
+//   "app__whitebg"
+// );
+
+export default AppWrap( MotionWrap(Footer, "app__footer"), "contact", "app__primarybg");

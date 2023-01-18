@@ -47,6 +47,11 @@ import mui from "../assets/mui.png";
 import netcore from "../assets/NETCore.png";
 import sqlserver from "../assets/sqlserver.png";
 
+import sitefinity from "../assets/certs/sitefinity.png"
+import az204 from "../assets/certs/az204.png"
+import az400 from "../assets/certs/az400.png"
+
+
 export default {
   email,
   mobile,
@@ -92,4 +97,7 @@ export default {
   mui,
   netcore,
   sqlserver,
+  sitefinity,
+  az204,
+  az400,
 };

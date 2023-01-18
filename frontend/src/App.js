@@ -1,9 +1,17 @@
 import React from "react";
 
 import { Navbar } from "./components";
-import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
+import {
+  About,
+  Footer,
+  Header,
+  Skills,
+  Testimonial,
+  Work,
+  Projects,
+  Certification,
+} from "./container";
 import "./App.scss";
-import Projects from "./container/Projects/Projects";
 
 const App = () => {
   return (
@@ -15,6 +23,7 @@ const App = () => {
       <Work />
       <Skills />
       <Testimonial />
+      <Certification />
       <Footer />
     </div>
   );

@@ -19,7 +19,7 @@ const Projects = () => {
   const carousel = useRef();
 
   useEffect(() => {
-    const query = '*[_type=="projects"] | order(_createdAt asc)';
+    const query = '*[_type=="projects"] | order(orderNum asc)';
     setLoading(true);
     client.fetch(query).then((data) => {
       setProjects(data);
@@ -38,8 +38,7 @@ const Projects = () => {
     <div id="projects" className="app__whitebg">
       <div className="app__flex">
         <h3 className="head-text">
-          Delivered more than <span>20 Projects</span> <br /> in{" "}
-          <span>A Year</span>
+            Delivered Projects in <span>Multiple Domains</span>
         </h3>
         <NavigationDots active="projects" />
       </div>

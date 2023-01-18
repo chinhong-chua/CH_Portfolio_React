@@ -46,8 +46,9 @@ const Header = () => {
               </div>
             </div>
             <div className="tag-cmp app__flex">
+              <p className="p-text">Frontend Developer</p>
               <p className="p-text">Web Developer</p>
-              <p className="p-text">Software Engineer</p>
+              <p className="p-text">Full Stack Engineer</p>
             </div>
           </div>
         </motion.div>
@@ -59,10 +60,10 @@ const Header = () => {
       >
         {[
           images.csharp,
-          images.javascript,
+          images.vue,
           images.netcore,
           images.react,
-          images.jquery,
+          images.typescript,
         ].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />

@@ -19,6 +19,11 @@ export default {
       type: "string",
     },
     {
+      name: "orderNum",
+      title: "Order Number",
+      type: "number",
+    },
+    {
       name: "imgUrl",
       title: "ImgUrl",
       type: "image",
