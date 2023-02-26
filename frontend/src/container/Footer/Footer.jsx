@@ -33,7 +33,12 @@ const Footer = () => {
     //   })
     //   .catch((err) => console.log(err));
 
-    fetch(`${process.env.REACT_APP_MAIL_SERVER}/send`, {
+    const emailLink =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:3011"
+        : process.env.REACT_APP_MAIL_SERVER;
+
+    fetch(`${emailLink}/send`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -147,9 +152,9 @@ const Footer = () => {
               onChange={handleChangeInput}
             />
           </div>
-          {/* {errors?.email?.type === "required" && (
+          {errors?.email?.type === "required" && (
             <p className="p-text errText">Your email is required</p>
-          )} */}
+          )}
           {errors?.email?.type === "pattern" && (
             <p className="p-text errText">Invalid Email</p>
           )}
@@ -159,13 +164,22 @@ const Footer = () => {
               placeholder="Your Message"
               value={message}
               name="message"
-              {...register("message", { required: true })}
+              {...register("message", {
+                required: true,
+                maxLength: 200,
+                // pattern: /^[A-Za-z]+$/i,
+              })}
               onChange={handleChangeInput}
             />
           </div>
 
           {errors?.message?.type === "required" && (
             <p className="p-text errText">Your message is required</p>
+          )}
+           {errors?.message?.type === "maxLength" && (
+            <p className="p-text errText">
+              Your message cannot exceed 200 characters
+            </p>
           )}
           <button
             disabled={loading}
