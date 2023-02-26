@@ -6,7 +6,6 @@ require("dotenv").config();
 
 const app = express();
 const port = 3011;
-app.useco;
 
 const nodemailer = require("nodemailer");
 
@@ -14,7 +13,9 @@ const nodemailer = require("nodemailer");
 app.use(bodyParser.json());
 
 // Use CORS middleware
-app.use(cors());
+app.use(cors({
+  origin:['https://chuachinhong.com','http://localhost:3000']
+}));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

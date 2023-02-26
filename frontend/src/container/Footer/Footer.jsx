@@ -33,7 +33,7 @@ const Footer = () => {
     //   })
     //   .catch((err) => console.log(err));
 
-    fetch("http://localhost:3011/send", {
+    fetch(`${process.env.REACT_APP_MAIL_SERVER}/send`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -168,6 +168,7 @@ const Footer = () => {
             <p className="p-text errText">Your message is required</p>
           )}
           <button
+            disabled={loading}
             type="button"
             className="p-text"
             onClick={handleSubmit(onSubmit)}
