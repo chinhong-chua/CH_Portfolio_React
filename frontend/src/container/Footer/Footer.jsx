@@ -15,7 +15,7 @@ const Footer = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setLoading(true);
 
     const contact = {
@@ -25,13 +25,30 @@ const Footer = () => {
       message: formData.message,
     };
 
-    client
-      .create(contact)
-      .then(() => {
+    // client
+    //   .create(contact)
+    //   .then(() => {
+    //     setLoading(false);
+    //     setIsFormSubmitted(true);
+    //   })
+    //   .catch((err) => console.log(err));
+
+    fetch("http://localhost:3011/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => {
         setLoading(false);
         setIsFormSubmitted(true);
+        setSubmittedMessage(res.body);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setSubmittedMessage(err);
+      });
   };
 
   const [formData, setFormData] = useState({
@@ -41,6 +58,7 @@ const Footer = () => {
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submittedMsg, setSubmittedMessage] = useState(null);
 
   const { username, email, message } = formData;
 
@@ -156,15 +174,9 @@ const Footer = () => {
           >
             {!loading ? "Send Message" : "Sending..."}
           </button>
-          {/* <input
-              type="submit"
-              className="p-text"
-              text={!loading ? "Send Message" : "Sending..."}
-            /> */}
-          {/* </form> */}
         </div>
       ) : (
-        <div>
+        <div className="m-3">
           <h3 className="head-text">Thank you for getting in touch!</h3>
         </div>
       )}
@@ -190,4 +202,8 @@ const Footer = () => {
 //   "app__whitebg"
 // );
 
-export default AppWrap( MotionWrap(Footer, "app__footer"), "contact", "app__primarybg");
+export default AppWrap(
+  MotionWrap(Footer, "app__footer"),
+  "contact",
+  "app__primarybg"
+);
