@@ -41,7 +41,7 @@ const Work = () => {
         My Side <span>Portfolio</span>
       </h2>
       <div className="app__work-filter">
-        {["React", "Vue", ".NET", ".NET Core", "C#", "JS", "All"].map(
+        {["React", "Vue", ".NET", "C#", "JS", "All"].map(
           (item, index) => (
             <div
               key={index}
