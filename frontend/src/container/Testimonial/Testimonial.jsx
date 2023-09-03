@@ -15,7 +15,6 @@ const Testimonial = () => {
   const [brands, setBrands] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-String.concat()
   const handleClick = (index) => {
     setCurrentIndex(index);
   };

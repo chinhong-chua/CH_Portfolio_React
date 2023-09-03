@@ -93,7 +93,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Contact Me for Job</h2>
+      <h2 className="head-text">Contact Me</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
@@ -176,7 +176,7 @@ const Footer = () => {
           {errors?.message?.type === "required" && (
             <p className="p-text errText">Your message is required</p>
           )}
-           {errors?.message?.type === "maxLength" && (
+          {errors?.message?.type === "maxLength" && (
             <p className="p-text errText">
               Your message cannot exceed 200 characters
             </p>
@@ -197,7 +197,8 @@ const Footer = () => {
       )}
       <button
         type="button"
-        className=" btn"
+        className=" btn-disabled"
+        disabled="true"
         onClick={() =>
           window.open(
             "https://files.chuachinhong.com/CHUA_CHIN HONG_CV Site.pdf",
